@@ -10,12 +10,11 @@ namespace NabCodingChallenge.Controllers
     /// Car controller.
     /// In .NET core , normal MVC controller and APIController has been combined.
     /// </summary>
-    //[Route("/api/cars")]
     [Route("/api/Pet.json")]
-    public class CarController : Controller
+    public class PetsController : Controller
     {
         readonly IDataService service;
-        public CarController(IDataService dataService)
+        public PetsController(IDataService dataService)
         {
             this.service = dataService;
         }

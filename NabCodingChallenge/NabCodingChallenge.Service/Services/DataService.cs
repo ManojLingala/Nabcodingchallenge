@@ -15,7 +15,7 @@ namespace NabCodingChallenge.Service.Services
 {
     public class DataService : IDataService
     {
-		const string GET_CARS_ENDPOINT = "/api/Pet.json";
+		const string GET_PETS_ENDPOINT = "/api/Pet.json";
 
 		readonly HttpClient client;
         readonly ServiceConfig config;
@@ -53,7 +53,7 @@ namespace NabCodingChallenge.Service.Services
             try
             {
 
-                var content = await this.client.GetStringAsync(GET_CARS_ENDPOINT);
+                var content = await this.client.GetStringAsync(GET_PETS_ENDPOINT);
                 var response = JsonConvert.DeserializeObject<ServiceResponse>(content);
                 ownersList = new List<IOwner>(response);
             }

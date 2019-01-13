@@ -26,7 +26,7 @@ namespace NabCodingChallenge.Test
 		}
 
         [Fact]
-        public void Owner_ShouldDeserialize_WhenMissingCarsInInput()
+        public void Owner_ShouldDeserialize_WhenMissingPetsInInput()
         {
             string input = "{name: \"Bob\"}";
             var owner = JsonConvert.DeserializeObject<Owner>(input);

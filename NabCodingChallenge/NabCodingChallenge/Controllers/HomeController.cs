@@ -21,18 +21,7 @@ namespace NabCodingChallenge.Controllers
             this.serviceConfig = serviceConfig.Value;
             this.dataService = dataService;
         }
-        //consider to use ASYNC method in here because Controller access to Http Service request, It may take long
-        // see API/Cars which implement using async
-        /*
-        public async Task<IActionResult> Index()
-		{
-			var data = await this.dataService.FetchDataAsyncAsync();
-
-			var viewModel = new HomeViewModel(data.ToSortedDictionary());
-
-			return View(viewModel);
-		}
-		*/
+    
         public async Task<IActionResult> Index()
         {
             var data =  await this.dataService.FetchDataAsync();
