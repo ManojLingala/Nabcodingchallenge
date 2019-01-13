@@ -1,0 +1,16 @@
+language: csharp
+dist: trusty
+sudo: required
+mono: none
+dotnet: 2.0.0
+solution: NabCodingChallenge.sln
+script:
+  - cd NabCodingChallenge
+  - dotnet restore
+  - dotnet build
+  - dotnet test NabCodingChallenge.Test/NabCodingChallenge.Test.csproj
+deploy:
+  provider: azure_web_apps
+notifications:
+  email:
+    - lingalamanojreddy@outlook.com

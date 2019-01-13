@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.3.0" />
+    <PackageReference Include="xunit.runner.console" Version="2.3.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.0" />
+    <PackageReference Include="Moq" Version="4.7.127" />
+    <PackageReference Include="RichardSzalay.MockHttp" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NabCodingChallenge.Common\NabCodingChallenge.Common.csproj" />
+    <ProjectReference Include="..\NabCodingChallenge.Model\NabCodingChallenge.Model.csproj" />
+    <ProjectReference Include="..\NabCodingChallenge.Service\NabCodingChallenge.Service.csproj" />
+    <ProjectReference Include="..\NabCodingChallenge\NabCodingChallenge.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+    <Compile Remove="MemoryCacheService.Test.cs" />
+  </ItemGroup>
+</Project>

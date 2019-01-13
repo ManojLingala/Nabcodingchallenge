@@ -1,0 +1,21 @@
+﻿@model HomeViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container">
+	<ul >
+    @foreach(var pets in Model.Pets.Keys) {
+
+        <li class="brand">@pets </li>
+        if(Model.Pets[pets] != null) {
+    	    <ul>
+                @foreach(var owner in Model.Pets[pets] ) {
+                    <li class="owner"> @owner</li>
+                }
+    		</ul>
+    	}
+    }
+    </ul>
+</div>
+
