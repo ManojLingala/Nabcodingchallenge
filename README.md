@@ -5,7 +5,7 @@
 To run source code on your local machine you need
 
 - git to clone source (of course) or use Download To Desktop
-- Visual Studio 2007 (Community is Ok)
+- Visual Studio 2017 (Community is Ok)
 - Net Core 2.0 SDK
 - NET Core 2.0 CLI
 
